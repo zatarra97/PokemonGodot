@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://Tileset/tileset.png" type="Texture" id=1]
 
@@ -36,28 +36,16 @@ extents = Vector2( 8, 8 )
 extents = Vector2( 8, 8 )
 
 [sub_resource type="RectangleShape2D" id=12]
-extents = Vector2( 8, 8 )
+extents = Vector2( 4, 8 )
 
 [sub_resource type="RectangleShape2D" id=13]
-extents = Vector2( 8, 8 )
-
-[sub_resource type="RectangleShape2D" id=36]
-extents = Vector2( 4, 8 )
-
-[sub_resource type="RectangleShape2D" id=37]
-extents = Vector2( 4, 8 )
-
-[sub_resource type="RectangleShape2D" id=38]
-extents = Vector2( 4, 8 )
-
-[sub_resource type="RectangleShape2D" id=39]
 extents = Vector2( 4, 8 )
 
 [sub_resource type="RectangleShape2D" id=14]
-extents = Vector2( 8, 8 )
+extents = Vector2( 4, 8 )
 
 [sub_resource type="RectangleShape2D" id=15]
-extents = Vector2( 8, 8 )
+extents = Vector2( 4, 8 )
 
 [sub_resource type="RectangleShape2D" id=16]
 extents = Vector2( 8, 8 )
@@ -66,13 +54,13 @@ extents = Vector2( 8, 8 )
 extents = Vector2( 8, 8 )
 
 [sub_resource type="RectangleShape2D" id=18]
-extents = Vector2( 4, 8 )
+extents = Vector2( 8, 8 )
 
-[sub_resource type="RectangleShape2D" id=40]
+[sub_resource type="RectangleShape2D" id=19]
 extents = Vector2( 8, 8 )
 
 [sub_resource type="RectangleShape2D" id=20]
-extents = Vector2( 8, 8 )
+extents = Vector2( 4, 8 )
 
 [sub_resource type="RectangleShape2D" id=21]
 extents = Vector2( 8, 8 )
@@ -81,39 +69,45 @@ extents = Vector2( 8, 8 )
 extents = Vector2( 8, 8 )
 
 [sub_resource type="RectangleShape2D" id=23]
-extents = Vector2( 4, 8 )
+extents = Vector2( 8, 8 )
 
 [sub_resource type="RectangleShape2D" id=24]
 extents = Vector2( 8, 8 )
 
 [sub_resource type="RectangleShape2D" id=25]
-extents = Vector2( 8, 8 )
+extents = Vector2( 4, 8 )
 
 [sub_resource type="RectangleShape2D" id=26]
-extents = Vector2( 8, 5 )
+extents = Vector2( 8, 8 )
 
 [sub_resource type="RectangleShape2D" id=27]
-extents = Vector2( 5, 8 )
+extents = Vector2( 8, 8 )
 
 [sub_resource type="RectangleShape2D" id=28]
-extents = Vector2( 8, 8 )
+extents = Vector2( 8, 5 )
 
 [sub_resource type="RectangleShape2D" id=29]
-extents = Vector2( 8, 5 )
+extents = Vector2( 5, 8 )
 
 [sub_resource type="RectangleShape2D" id=30]
-extents = Vector2( 5, 8 )
-
-[sub_resource type="RectangleShape2D" id=31]
 extents = Vector2( 8, 8 )
 
-[sub_resource type="RectangleShape2D" id=32]
+[sub_resource type="RectangleShape2D" id=31]
 extents = Vector2( 8, 5 )
 
-[sub_resource type="RectangleShape2D" id=33]
+[sub_resource type="RectangleShape2D" id=32]
 extents = Vector2( 5, 8 )
 
+[sub_resource type="RectangleShape2D" id=33]
+extents = Vector2( 8, 8 )
+
 [sub_resource type="RectangleShape2D" id=34]
+extents = Vector2( 8, 5 )
+
+[sub_resource type="RectangleShape2D" id=35]
+extents = Vector2( 5, 8 )
+
+[sub_resource type="RectangleShape2D" id=36]
 extents = Vector2( 8, 8 )
 
 [node name="Tileset" type="Node"]
@@ -284,23 +278,13 @@ region_rect = Rect2( 103, 18, 16, 16 )
 position = Vector2( 90, 70 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 239, 290, 16, 16 )
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Sprite25"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite25/StaticBody2D"]
-shape = SubResource( 9 )
+region_rect = Rect2( 204, 290, 16, 16 )
 
 [node name="Sprite26" type="Sprite" parent="."]
 position = Vector2( 110, 70 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 256, 290, 16, 16 )
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Sprite26"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite26/StaticBody2D"]
-shape = SubResource( 10 )
+region_rect = Rect2( 222, 290, 16, 16 )
 
 [node name="Sprite27" type="Sprite" parent="."]
 position = Vector2( 130, 70 )
@@ -311,7 +295,7 @@ region_rect = Rect2( 239, 324, 16, 16 )
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite27"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite27/StaticBody2D"]
-shape = SubResource( 11 )
+shape = SubResource( 9 )
 
 [node name="Sprite31" type="Sprite" parent="."]
 position = Vector2( 150, 70 )
@@ -322,7 +306,7 @@ region_rect = Rect2( 273, 324, 16, 16 )
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite31"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite31/StaticBody2D"]
-shape = SubResource( 12 )
+shape = SubResource( 10 )
 
 [node name="Sprite32" type="Sprite" parent="."]
 position = Vector2( 170, 70 )
@@ -333,7 +317,7 @@ region_rect = Rect2( 290, 324, 16, 16 )
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite32"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite32/StaticBody2D"]
-shape = SubResource( 13 )
+shape = SubResource( 11 )
 
 [node name="Sprite33" type="Sprite" parent="."]
 position = Vector2( 150, 90 )
@@ -375,7 +359,7 @@ region_rect = Rect2( 324, 18, 16, 16 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="curtains3D4/StaticBody2D"]
 position = Vector2( -4, 0 )
-shape = SubResource( 36 )
+shape = SubResource( 12 )
 
 [node name="Sprite42" type="Sprite" parent="."]
 position = Vector2( 190, 110 )
@@ -387,7 +371,7 @@ region_rect = Rect2( 324, 35, 16, 14 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite42/StaticBody2D"]
 position = Vector2( -4, 0 )
-shape = SubResource( 37 )
+shape = SubResource( 13 )
 
 [node name="curtains3D5" type="Sprite" parent="."]
 position = Vector2( 210, 90 )
@@ -405,7 +389,7 @@ region_rect = Rect2( 358, 18, 16, 16 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="curtains3D6/StaticBody2D"]
 position = Vector2( 4, 0 )
-shape = SubResource( 38 )
+shape = SubResource( 14 )
 
 [node name="Sprite43" type="Sprite" parent="."]
 position = Vector2( 230, 110 )
@@ -417,7 +401,7 @@ region_rect = Rect2( 358, 35, 16, 14 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite43/StaticBody2D"]
 position = Vector2( 4, 0 )
-shape = SubResource( 39 )
+shape = SubResource( 15 )
 
 [node name="Sprite28" type="Sprite" parent="."]
 position = Vector2( 90, 90 )
@@ -428,7 +412,7 @@ region_rect = Rect2( 239, 307, 16, 16 )
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite28"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite28/StaticBody2D"]
-shape = SubResource( 14 )
+shape = SubResource( 16 )
 
 [node name="Sprite30" type="Sprite" parent="."]
 position = Vector2( 130, 90 )
@@ -439,7 +423,7 @@ region_rect = Rect2( 256, 324, 16, 16 )
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite30"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite30/StaticBody2D"]
-shape = SubResource( 15 )
+shape = SubResource( 17 )
 
 [node name="Sprite35" type="Sprite" parent="."]
 position = Vector2( 110, 90 )
@@ -450,7 +434,7 @@ region_rect = Rect2( 256, 307, 16, 16 )
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite35"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite35/StaticBody2D"]
-shape = SubResource( 16 )
+shape = SubResource( 18 )
 
 [node name="Sprite13" type="Sprite" parent="."]
 position = Vector2( 90, 10 )
@@ -473,7 +457,7 @@ region_rect = Rect2( 120, 205, 16, 16 )
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite15"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite15/StaticBody2D"]
-shape = SubResource( 17 )
+shape = SubResource( 19 )
 
 [node name="Fence2" type="Sprite" parent="."]
 position = Vector2( 110, 30 )
@@ -485,7 +469,7 @@ region_rect = Rect2( 103, 205, 16, 16 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Fence2/StaticBody2D"]
 position = Vector2( -4, 0 )
-shape = SubResource( 18 )
+shape = SubResource( 20 )
 
 [node name="Fence9" type="Sprite" parent="."]
 position = Vector2( 110, 10 )
@@ -496,7 +480,7 @@ region_rect = Rect2( 103, 188, 16, 16 )
 [node name="StaticBody2D" type="StaticBody2D" parent="Fence9"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Fence9/StaticBody2D"]
-shape = SubResource( 40 )
+shape = SubResource( 21 )
 
 [node name="Fence3" type="Sprite" parent="."]
 position = Vector2( 110, 50 )
@@ -507,7 +491,7 @@ region_rect = Rect2( 103, 222, 16, 16 )
 [node name="StaticBody2D" type="StaticBody2D" parent="Fence3"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Fence3/StaticBody2D"]
-shape = SubResource( 20 )
+shape = SubResource( 22 )
 
 [node name="Fence4" type="Sprite" parent="."]
 position = Vector2( 130, 10 )
@@ -518,7 +502,7 @@ region_rect = Rect2( 120, 188, 16, 16 )
 [node name="StaticBody2D" type="StaticBody2D" parent="Fence4"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Fence4/StaticBody2D"]
-shape = SubResource( 21 )
+shape = SubResource( 23 )
 
 [node name="Fence5" type="Sprite" parent="."]
 position = Vector2( 150, 10 )
@@ -529,7 +513,7 @@ region_rect = Rect2( 137, 188, 16, 16 )
 [node name="StaticBody2D" type="StaticBody2D" parent="Fence5"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Fence5/StaticBody2D"]
-shape = SubResource( 22 )
+shape = SubResource( 24 )
 
 [node name="Fence6" type="Sprite" parent="."]
 position = Vector2( 150, 30 )
@@ -541,7 +525,7 @@ region_rect = Rect2( 137, 205, 16, 16 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Fence6/StaticBody2D"]
 position = Vector2( 4, 0 )
-shape = SubResource( 23 )
+shape = SubResource( 25 )
 
 [node name="Fence7" type="Sprite" parent="."]
 position = Vector2( 150, 50 )
@@ -552,7 +536,7 @@ region_rect = Rect2( 137, 222, 16, 16 )
 [node name="StaticBody2D" type="StaticBody2D" parent="Fence7"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Fence7/StaticBody2D"]
-shape = SubResource( 24 )
+shape = SubResource( 26 )
 
 [node name="Fence8" type="Sprite" parent="."]
 position = Vector2( 130, 50 )
@@ -563,13 +547,25 @@ region_rect = Rect2( 120, 222, 16, 16 )
 [node name="StaticBody2D" type="StaticBody2D" parent="Fence8"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Fence8/StaticBody2D"]
-shape = SubResource( 25 )
+shape = SubResource( 27 )
 
 [node name="Sprite24" type="Sprite" parent="."]
 position = Vector2( 130, 30 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 137, 239, 16, 16 )
+
+[node name="Tree top sx" type="Sprite" parent="."]
+position = Vector2( 10, 110 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 204, 290, 16, 16 )
+
+[node name="Tree to dx" type="Sprite" parent="."]
+position = Vector2( 30, 110 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 222, 290, 16, 16 )
 
 [node name="barrier1" type="Sprite" parent="."]
 position = Vector2( 170, 10 )
@@ -581,7 +577,7 @@ region_rect = Rect2( 103, 69, 16, 16 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="barrier1/StaticBody2D"]
 position = Vector2( 0, 4 )
-shape = SubResource( 26 )
+shape = SubResource( 28 )
 
 [node name="barrier2" type="Sprite" parent="."]
 position = Vector2( 170, 30 )
@@ -593,7 +589,7 @@ region_rect = Rect2( 120, 103, 16, 16 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="barrier2/StaticBody2D"]
 position = Vector2( -4, 0 )
-shape = SubResource( 27 )
+shape = SubResource( 29 )
 
 [node name="barrier3" type="Sprite" parent="."]
 position = Vector2( 170, 50 )
@@ -604,7 +600,7 @@ region_rect = Rect2( 103, 86, 16, 16 )
 [node name="StaticBody2D" type="StaticBody2D" parent="barrier3"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="barrier3/StaticBody2D"]
-shape = SubResource( 28 )
+shape = SubResource( 30 )
 
 [node name="barrier4" type="Sprite" parent="."]
 position = Vector2( 190, 10 )
@@ -616,7 +612,7 @@ region_rect = Rect2( 120, 69, 16, 16 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="barrier4/StaticBody2D"]
 position = Vector2( 0, 4 )
-shape = SubResource( 29 )
+shape = SubResource( 31 )
 
 [node name="barrier5" type="Sprite" parent="."]
 position = Vector2( 190, 30 )
@@ -628,7 +624,7 @@ region_rect = Rect2( 137, 86, 16, 16 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="barrier5/StaticBody2D"]
 position = Vector2( 4, 0 )
-shape = SubResource( 30 )
+shape = SubResource( 32 )
 
 [node name="barrier6" type="Sprite" parent="."]
 position = Vector2( 190, 50 )
@@ -639,7 +635,7 @@ region_rect = Rect2( 290, 1, 16, 16 )
 [node name="StaticBody2D" type="StaticBody2D" parent="barrier6"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="barrier6/StaticBody2D"]
-shape = SubResource( 31 )
+shape = SubResource( 33 )
 
 [node name="barrier7" type="Sprite" parent="."]
 position = Vector2( 210, 10 )
@@ -651,7 +647,7 @@ region_rect = Rect2( 137, 69, 16, 16 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="barrier7/StaticBody2D"]
 position = Vector2( 0, 4 )
-shape = SubResource( 32 )
+shape = SubResource( 34 )
 
 [node name="barrier8" type="Sprite" parent="."]
 position = Vector2( 210, 30 )
@@ -663,7 +659,7 @@ region_rect = Rect2( 120, 86, 16, 16 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="barrier8/StaticBody2D"]
 position = Vector2( 4, 0 )
-shape = SubResource( 33 )
+shape = SubResource( 35 )
 
 [node name="rock" type="Sprite" parent="."]
 position = Vector2( 210, 50 )
@@ -674,5 +670,5 @@ region_rect = Rect2( 120, 273, 16, 16 )
 [node name="StaticBody2D" type="StaticBody2D" parent="rock"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="rock/StaticBody2D"]
-shape = SubResource( 34 )
+shape = SubResource( 36 )
 
