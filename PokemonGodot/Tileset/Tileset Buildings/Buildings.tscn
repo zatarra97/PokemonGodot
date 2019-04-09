@@ -1,0 +1,93 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Tileset/Tileset Buildings/buildings.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 40, 30 )
+
+[node name="Node" type="Node"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 10, 10 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 154, 181, 16, 16 )
+
+[node name="Sprite12" type="Sprite" parent="."]
+position = Vector2( 10, 30 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 154, 197, 16, 16 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 30, 10 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 170, 181, 16, 16 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 50, 10 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 186, 181, 16, 16 )
+
+[node name="Null Sprite" type="Sprite" parent="."]
+position = Vector2( 10, 70 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 379, 782, 16, 16 )
+
+[node name="PokeCenter2" type="Sprite" parent="."]
+position = Vector2( 110, 60 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 5, 468, 96, 64 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="PokeCenter2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PokeCenter2/StaticBody2D"]
+position = Vector2( 0, -2 )
+shape = SubResource( 1 )
+
+[node name="PokeCenter1" type="Sprite" parent="."]
+position = Vector2( 110, 10 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 5, 452, 96, 16 )
+
+[node name="Sprite5" type="Sprite" parent="."]
+position = Vector2( 30, 30 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 170, 197, 16, 16 )
+
+[node name="Sprite10" type="Sprite" parent="."]
+position = Vector2( 30, 30 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 170, 197, 16, 16 )
+
+[node name="Sprite6" type="Sprite" parent="."]
+position = Vector2( 50, 30 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 186, 197, 16, 16 )
+
+[node name="Sprite7" type="Sprite" parent="."]
+position = Vector2( 10, 50 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 154, 213, 16, 16 )
+
+[node name="Sprite8" type="Sprite" parent="."]
+position = Vector2( 30, 50 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 170, 213, 16, 16 )
+
+[node name="Sprite9" type="Sprite" parent="."]
+position = Vector2( 50, 50 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 186, 213, 16, 16 )
+

@@ -274,20 +274,8 @@ texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 103, 18, 16, 16 )
 
-[node name="Sprite25" type="Sprite" parent="."]
-position = Vector2( 90, 70 )
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 204, 290, 16, 16 )
-
-[node name="Sprite26" type="Sprite" parent="."]
-position = Vector2( 110, 70 )
-texture = ExtResource( 1 )
-region_enabled = true
-region_rect = Rect2( 222, 290, 16, 16 )
-
 [node name="Sprite27" type="Sprite" parent="."]
-position = Vector2( 130, 70 )
+position = Vector2( 90, 90 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 239, 324, 16, 16 )
@@ -298,7 +286,7 @@ region_rect = Rect2( 239, 324, 16, 16 )
 shape = SubResource( 9 )
 
 [node name="Sprite31" type="Sprite" parent="."]
-position = Vector2( 150, 70 )
+position = Vector2( 130, 90 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 273, 324, 16, 16 )
@@ -309,7 +297,7 @@ region_rect = Rect2( 273, 324, 16, 16 )
 shape = SubResource( 10 )
 
 [node name="Sprite32" type="Sprite" parent="."]
-position = Vector2( 170, 70 )
+position = Vector2( 150, 90 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 290, 324, 16, 16 )
@@ -320,7 +308,7 @@ region_rect = Rect2( 290, 324, 16, 16 )
 shape = SubResource( 11 )
 
 [node name="Sprite33" type="Sprite" parent="."]
-position = Vector2( 150, 90 )
+position = Vector2( 170, 70 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 341, 290, 16, 16 )
@@ -404,7 +392,7 @@ position = Vector2( 4, 0 )
 shape = SubResource( 15 )
 
 [node name="Sprite28" type="Sprite" parent="."]
-position = Vector2( 90, 90 )
+position = Vector2( 90, 70 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 239, 307, 16, 16 )
@@ -415,7 +403,7 @@ region_rect = Rect2( 239, 307, 16, 16 )
 shape = SubResource( 16 )
 
 [node name="Sprite30" type="Sprite" parent="."]
-position = Vector2( 130, 90 )
+position = Vector2( 110, 90 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 256, 324, 16, 16 )
@@ -426,7 +414,7 @@ region_rect = Rect2( 256, 324, 16, 16 )
 shape = SubResource( 17 )
 
 [node name="Sprite35" type="Sprite" parent="."]
-position = Vector2( 110, 90 )
+position = Vector2( 110, 70 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 256, 307, 16, 16 )
@@ -556,13 +544,13 @@ region_enabled = true
 region_rect = Rect2( 137, 239, 16, 16 )
 
 [node name="Tree top sx" type="Sprite" parent="."]
-position = Vector2( 10, 110 )
+position = Vector2( 130, 70 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 204, 290, 16, 16 )
 
 [node name="Tree to dx" type="Sprite" parent="."]
-position = Vector2( 30, 110 )
+position = Vector2( 150, 70 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 222, 290, 16, 16 )
