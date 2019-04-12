@@ -1,19 +1,22 @@
 #Tutte le proprietà del nodo Sprite
 extends KinematicBody2D
 
-enum TypeOfMovement{
+signal dialogue_started
+
+enum TypeOfMovement{	#Contiene le velocità dei diversi tipi di movimento
   WALKING = 1
   RUNNING = 2
   CYCLING = 3
 }
 
-var bicycle = true 			#Verifica che il giocatore abbia sbloccato la bicicletta durante il gioco
+
+var bicycle = false 		#Verifica che il giocatore abbia sbloccato la bicicletta durante il gioco
 var activeBicycle = false 	#Variabile boleana per attivare/disattivare la bicicletta
-var waitForBicycle = false  #Quando la bici viene attivata/disattivata aspetterà che passino i frame di timeForBicycle
+var waitForBicycle = false  #Quando la bici viene attivata/disattivata aspetterà che passino il numero di frame di timeForBicycle 
 var timeForBicycle = 1		#Quanti frame bisogna aspettare prima di riprendere il movimento
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
-	pass # Replace with function body.
+	pass 
 
 func _process(delta):	
 	var direction = null		#Contiene la direzione dello Sprite
@@ -23,25 +26,28 @@ func _process(delta):
 	else:                            
 		if Input.is_action_pressed("ui_up"):
 			direction = "UP"
+			$RayCast2D.cast_to = Vector2(0, -30)
 		elif Input.is_action_pressed("ui_down"):
 			direction = "DOWN"
+			$RayCast2D.cast_to = Vector2(0, 30)
 		elif Input.is_action_pressed("ui_left"):
 			direction = "LEFT"
+			$RayCast2D.cast_to = Vector2(-30, 0)
 		elif Input.is_action_pressed("ui_right"):
 			direction = "RIGHT"
+			$RayCast2D.cast_to = Vector2(30, 0)
 				
-		if Input.is_action_pressed("ui_bycicle") and (bicycle == true):		#Tasto che attiva la bicicletta
+		if Input.is_action_pressed("ui_bycicle") and (bicycle == true):		
 			var velocity = Vector2()
-			waitForBicycle = true #Attiva un piccolo stop che aspetta qalche frame dopo aver mostrato/rimosso la bici
-			timeForBicycle = 15 #Frames da aspettare
+			waitForBicycle = true       #Attiva un piccolo stop di movimento
+			timeForBicycle = 15 		#Frames da aspettare
 			if (activeBicycle == false):
 				print("Bicycle activated")
 				activeBicycle = true
-				self.update_animation(velocity, activeBicycle)
 			else: 
 				print("Bicycle disactivated")
 				activeBicycle = false
-				self.update_animation(velocity, activeBicycle)
+			self.update_animation(velocity, activeBicycle)	
 				
 		if Input.is_action_pressed("ui_run") and direction != null and activeBicycle != true:
 			moving(TypeOfMovement.RUNNING, direction, delta)
@@ -49,7 +55,17 @@ func _process(delta):
 			moving(TypeOfMovement.CYCLING, direction, delta)
 		elif direction != null or direction == null:
 			moving(TypeOfMovement.WALKING, direction, delta)
-	
+			
+			
+		if $RayCast2D.is_colliding():
+			var collider = $RayCast2D.get_collider()
+			if collider !=null and Input.is_action_just_released("ui_action") and collider.name == "Bicycle":
+				emit_signal("dialogue_started", collider.dialogue_text)
+				bicycle=true
+				collider.queue_free()	#Cancella lo sprite della bicicletta
+				$AnimatedSprite.stop()	#ferma l'animazione dello sprite
+				set_process(false)	#Blocca la funzione _process e quindi il giocatore
+				
 	
 func waitingForReady():	
 	timeForBicycle -=1
@@ -68,16 +84,12 @@ func moving (speed, direction, delta):
 		
 	if direction == "UP":
 		velocity.y = 0 - speed
-		print(velocity.y)
 	elif direction == "DOWN":
 			velocity.y = speed
-			print(velocity.y)
 	elif direction == "LEFT":
 			velocity.x = 0 - speed
-			print(velocity.x)
 	elif direction == "RIGHT":
 			velocity.x = speed
-			print(velocity.x)
 			
 	var movement = 250*velocity*delta
 	self.move_and_collide(movement)
@@ -139,3 +151,6 @@ func update_animation(velocity,bicycle):
 			elif $AnimatedSprite.animation == 'ride_left' or $AnimatedSprite.animation == 'stand_left' or $AnimatedSprite.animation == 'walk_left':
 				$AnimatedSprite.play("ride_stand_left")	
 	
+
+func _on_NinePatchRect_dialog_finished():
+	set_process(true)		#Appena il dialogo finisce può riprendere il controllo sul Player
